@@ -23,7 +23,6 @@ Before running the application, make sure you have the following installed on yo
 ## How to Run
 
 1. **Clone the Repository**:
-
    ```bash
    git clone https://github.com/your-username/task-manager.git
    cd task-manager
@@ -32,47 +31,50 @@ Before running the application, make sure you have the following installed on yo
 
 - Create a MySQL database named task_manager.
 - Run the following SQL script to create the tasks table:
-
-CREATE TABLE tasks (
+   ```bash
+   CREATE TABLE tasks (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description VARCHAR(255),
     priority INT,
     due_date DATE
-);
+   );
 
 3. **Configure Database Connection**:
 
 - Open src/main/resources/application.properties file.
 - Update the database connection details according to your MySQL configuration:
 
-spring.datasource.url=jdbc:mysql://localhost:3306/task_manager
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+   ```bash
+   spring.datasource.url=jdbc:mysql://localhost:3306/task_manager
+   spring.datasource.username=your_username
+   spring.datasource.password=your_password
+   spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 4. **Build and Run the Application**:
    
 - Build the application using Maven:
-mvn clean install
+   ```bash
+     mvn clean install
 
 - Run the application:
-java -jar target/taskmanager-1.0.0.jar
+   ```bash
+   java -jar target/taskmanager-1.0.0.jar
 
 5. **Access the Application**:
 Open your web browser and go to http://localhost:8080/taskmanager/home to access the application.
 
 ## Database Schema
 
-- The application uses a MySQL database with the following schema:
-
-CREATE TABLE tasks (
+- The application uses a MySQL database with the following schema:  
+   ```bash
+   CREATE TABLE tasks (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description VARCHAR(255),
     priority INT,
     due_date DATE
-);
+   );
 
 ## Contributing
 
